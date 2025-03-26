@@ -7,10 +7,10 @@
 4. HAL_ADC_STATE_BUSY ADC正在进行转换或校准
 5. HAL_ADC_STATE_REG_EOC 规则通道转换完成
 6. HAL_ADC_STATE_INJ_EOC 注入通道转换完成
-- HAL_IS_BIT_SET(REG，BIT)函数
-作用：检查寄存器REG的特定位BIT是否被置1，被置1返回true。其本质是 ((REG)&(BIT))!=0U.
-示例：
-HAL_IS_BIT_SET(HAL_ADC_GetState(&hadc1), HAL_ADC_STATE_READY)
-假设HAL_ADC_GetState()返回：0011
-HAL_ADC_STATE_READY对应第0位：0001（0x01）
-HAL_IS_BIT_SET(0x03, HAL_ADC_STATE_READY)  // 0x03 & 0x01 = 0x01 ≠ 0 → 返回1（就绪）
+- HAL_IS_BIT_SET(REG，BIT)函数  
+作用：检查寄存器REG的特定位BIT是否被置1，被置1返回true。其本质是 ((REG)&(BIT))!=0U.  
+示例：  
+HAL_IS_BIT_SET(HAL_ADC_GetState(&hadc1), HAL_ADC_STATE_READY)  
+假设HAL_ADC_GetState()返回：0011  
+HAL_ADC_STATE_READY对应第0位：0001（0x01）  
+HAL_IS_BIT_SET(0x03, HAL_ADC_STATE_READY)  // 0x03 & 0x01 = 0x01 ≠ 0 → 返回1（就绪）  
