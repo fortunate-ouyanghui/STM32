@@ -5,4 +5,9 @@
 2. ADC转换结束
 3. 注入转换结束
 4. 模拟看门狗
+# ADC参数
+- Resolution：ADC转换精度
+- Data Alignment：数据对齐
+- Scan Conversion Mode：扫描模式
+- Continuous Conversion Mode：连续转化模式
 
