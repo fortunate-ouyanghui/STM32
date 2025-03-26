@@ -1,0 +1,16 @@
+# ADC相关API函数
+- HAL_ADC_GetState()函数
+返回值：
+1. HAL_ADC_STATE_RESET ADC处于复位状态
+2. HAL_ADC_STATE_INIT ADC初始化完成
+3. HAL_ADC_STATE_READY ADC已就绪（可执行转换） 
+4. HAL_ADC_STATE_BUSY ADC正在进行转换或校准
+5. HAL_ADC_STATE_REG_EOC 规则通道转换完成
+6. HAL_ADC_STATE_INJ_EOC 注入通道转换完成
+- HAL_IS_BIT_SET(REG，BIT)函数
+作用：检查寄存器REG的特定位BIT是否被置1，被置1返回true。其本质是 ((REG)&(BIT))!=0U.
+示例：
+HAL_IS_BIT_SET(HAL_ADC_GetState(&hadc1), HAL_ADC_STATE_READY)
+假设HAL_ADC_GetState()返回：0011
+HAL_ADC_STATE_READY对应第0位：0001（0x01）
+HAL_IS_BIT_SET(0x03, HAL_ADC_STATE_READY)  // 0x03 & 0x01 = 0x01 ≠ 0 → 返回1（就绪）
