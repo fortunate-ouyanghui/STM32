@@ -1,4 +1,4 @@
-# ADC框图
+# ADC工作原理
 ![ADC](https://github.com/user-attachments/assets/87030744-57a1-4582-8db3-4bf655d294c5)
 - ADC中断事件有：
 1. DMA溢出
